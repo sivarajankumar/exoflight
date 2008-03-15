@@ -89,4 +89,4 @@ Vecmath library by Kenji Hiranabe, Eiwa System Management, Inc. http://www.objec
 
 ACME software: http://www.acme.com/java/software/
 
-Implementation of Lambert algorithm by Chris D'Souza January 20, 1989 (Verified by Darrel Monroe, 10/25/90)
+Implementation of Lambert algorithm by Chris D'Souza January 20, 1989 (Verified by Darrel Monroe, 10/25/90) Thanks to Tim Crain and UT.
