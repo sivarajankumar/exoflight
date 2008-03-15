@@ -12,7 +12,7 @@ The purpose of this document is to give a high-level overview of the goals of EX
 
 The short description of EXOFLIGHT as specified in the original design document is:
 
-A historically-based and future-looking spaceflight simulator. The player can fly several space vehicles and rockets, travel to the bodies of the solar system, and complete a variety of missions.
+A historically-based and future-looking spaceflight simulator. The player can fly several space vehicles and rockets, travel to the bodies of the solar system, and complete a   variety of missions.
 
 The intended audience was intended to be space enthusiasts of all ages and skill levels. However, the complex nature of spaceflight and desire for accurate astrodynamics simulation made it apparent that the sim was mainly for more "hardcore" simmers. Casual users may still enjoy the eye-candy provided by EXOFLIGHT's graphics engine.
 
@@ -38,7 +38,7 @@ From the original design document:
 
 ====1.3.1 Pioneering Genre====
 
-The field of space simulation is still in its infancy. To date, there have been only a handful of space simulators aimed at the consumer, none of which has gained mass market appeal. None yet have successfully simulated a complete historical mission in detail, with the exception of [http://www.aokwom.com/ A-OK! The Wings of Mercury^TM^], which simulates a Mercury mission in great detail. Since there is little prior art to build upon, EXOFLIGHT must introduce many pioneering elements if it is to be successful.
+The field of space simulation is still in its infancy. To date, there have been only a handful of space simulators aimed at the consumer, none of which has gained mass market appeal. None yet have successfully simulated a complete historical mission in detail, with the exception of [http://www.aokwom.com/ A-OK! The Wings of Mercury(TM)], which simulates a Mercury mission in great detail. Since there is little prior art to build upon, EXOFLIGHT must introduce many pioneering elements if it is to be successful.
 
 ====1.3.2 Accuracy of Simulation====
 
@@ -50,73 +50,75 @@ Users have different perceptions of what makes simulation "fun." The difficulty 
 
 ====1.3.4 Rendering Planetary Bodies====
 
-The problem of rendering an entire planet in 3D is a tough one. Conventional flight simulators take many shortcuts in rendering the world, like assuming that the surface is flat, clipping scenery at an abitrary distance, and simplifying lighting conditions. EXOFLIGHT must render planetary bodies at distances from meters above the surface to millions of miles away, support irregular bodies like asteroids, have believable lighting conditions and atmospheric conditions, show eclipses, and display ring systems. A challenging task!
+The problem of rendering an entire planet in 3D is a tough one. Conventional flight simulators take many shortcuts in rendering the world, like assuming that the surface is flat, clipping scenery at an arbitrary distance, and simplifying lighting conditions. EXOFLIGHT must render planetary bodies at distances from meters above the surface to millions of miles away, support irregular bodies like asteroids, have believable lighting conditions and atmospheric conditions, show eclipses, and display ring systems. A challenging task!
 
-The main goal in the visual display of EXOFLIGHT is ``seamless from ground to orbit''. This means that the user should not perceive a distinct LOD transition at any point in egress/ingress to a planet's surface. Many simulators have a couple of LOD levels, and depending on distance from the ground, a given scenery set is loaded. This is not acceptable in EXOFLIGHT, as this will ruin the sense of realism.
+The main goal in the visual display of EXOFLIGHT is "seamless from ground to orbit." This means that the user should not perceive a distinct level-of-detail (LOD) transition at any point in egress/ingress to a planet's surface. Many simulators have a couple of LOD levels, and depending on distance from the ground, a given scenery set is loaded. This is not acceptable in EXOFLIGHT, as this will ruin the sense of realism.
 
-1.4 Language/Technology Choices
+===1.4 Language/Technology Choices===
 
-1.4.1 Java
+====1.4.1 Java====
 
-The Java language and Sun HotSpot VM were chosen for EXOFLIGHT. This is a dangerous choice, since no major commercial games have been implemented in Java, which has a reputation for being slow, buggy, and unsuitable for game programming. These are half-truths. Here are some refutations of common Java ``myths'':
+The Java language and Sun HotSpot VM were chosen for EXOFLIGHT. This is a dangerous choice, since no major commercial games have been implemented in Java, which has a reputation for being slow, buggy, and unsuitable for game programming. These are half-truths. Here are some refutations of common Java "myths":
 
-MM Java is slow. New VMs like HotSpot execute programs at around 80% C++ speeds on average.
+  * *Java is slow.* New VMs like HotSpot execute programs at around 80% C++ speeds on average.
 
-MM Java is buggy. Modern VMs are extremely stable, and the language semantics prevent many common coding errors.
+  * *Java is buggy.* Modern VMs are extremely stable, and the language semantics prevent many common coding errors.
 
-MM Java is not suited for games. True, Java is a bit slower and is not as memory-efficient as other languages. Still, the performance is sufficient for a space-simulation application such as EXOFLIGHT.
+  * *Java is not suited for games.* True, Java is a bit slower and is not as memory-efficient as other languages. Still, the performance is sufficient for a space-simulation application such as EXOFLIGHT.
 
-MM Java's UI is horrible. The Java AWT/Swing libraries are bloated and buggy, but these are not used in EXOFLIGHT -- instead, a new OpenGL-based GUI was created from scratch, which besides being functional, looks pretty slick.
+  * *Java's UI is horrible.* The Java AWT/Swing libraries are bloated and buggy, but these are not used in EXOFLIGHT -- instead, a new OpenGL-based GUI was created from scratch, which besides being functional, looks pretty slick.
 
-Java does have some drawbacks however:
+Java does have some drawbacks, however:
 
-• Interfacing with Microsoft technologies such as DirectX is not supported, forcing some technology decisions.
+  * Interfacing with Microsoft technologies such as DirectX is not supported, forcing some technology decisions.
 
-• Java's garbage collection causes some ``burps'' in the execution when GC is performed.
+  * Java's garbage collection causes some "burps" in the execution when GC is performed.
 
-• Lack of control over memory allocation makes some features performance-poor (ROAM rendering, for example).
+  * Lack of control over memory allocation makes some features performance-poor (ROAM rendering, for example).
 
-But the main reason for going with Java is simple: I hate coding in C++. It is too complex for my tastes, and thus coding takes longer and the resulting programs are less reliable. Java has an excellent packaging system, super-fast compile speed, and pleasant language semantics. Also, the exception mechanism and ability to print stack traces make postmortem debugging much easier.
+But my reasons for choosing Java are simple: Java has an excellent packaging system, super-fast compile speed, and pleasant language semantics. Also, the exception mechanism and ability to print stack traces make postmortem debugging much easier.
 
-1.4.2 OpenGL
+====1.4.2 OpenGL====
 
 OpenGL was selected as the graphics API because there is no DirectX8 wrapper for Java. The GL4Java wrapper was selected because it is the most-heavily-maintained wrapper available. OpenGL is a good choice for a space simulation application, but the unsure future of the API on Windows platforms makes this decision risky.
 
-1.4.3 SDL
+====1.4.3 SDL====
 
 SDL (Simple Directmedia Layer) is used for certain game-related functions, right now just for joystick access. Later it can be used for input, sound, and 2D graphics if the need arises. Another fringe benefit of using this API is that it is theoretically possible to run EXOFLIGHT on Linux, MacOS X, and other platforms that support OpenGL and SDL.
 
-2 Major Subsystems
+==2 Major Subsystems==
 
 This section describes some of the major subsystems of EXOFLIGHT, and details how they were designed and implemented.
 
-2.1 Modular Spacecraft
+===2.1 Modular Spacecraft===
 
 A spacecraft in EXOFLIGHT is composed of one or more modules. These modules connect to each other at right angles to form the vehicle structure. For instance, a two-stage rocket might have two modules: the lower and upper stage. The payload might be yet another module.
 
-Each module in turn contains one or more components. Components include propulsion systems, RCS, life support, batteries, fuel tanks, solar panels and other miscellaneous devices.
+Each module in turn contains one or more components. Components include propulsion systems, reaction control systems (RCS), life support, batteries, fuel tanks, solar panels and other miscellaneous devices.
 
 A component can contain a given amount of resources. Resources are things like fuel, oxidizer, supplies, and electricity. Each capability has a certain limit on the amounts and types of resources it can contain -- for example, a tank may only store hydrogen and oxidizer, and a battery may only store electricity. There are several different classes of capabilities, depending on function:
 
-MM Tank The simplest kind of capability -- it just stores resources.
+  * *Tank* - The simplest kind of capability -- it just stores resources.
 
-MM Propulsion There are several types of propulsion -- rocket, jet, nuclear, etc. It consumes resources and provides thrust.
+  * *Propulsion* - There are several types of propulsion -- rocket, jet, nuclear, etc. It consumes resources and provides thrust.
 
-MM Attitude A special class of propulsion system that modifies the attitude of the spacecraft. This includes RCS thrusters, gimbals, and aerodynamic surfaces.
+  * *Attitude* - A special class of propulsion system that modifies the attitude of the spacecraft. This includes RCS thrusters, gimbals, and aerodynamic surfaces.
 
-MM Guidance Controls the attitude control components of the spacecraft, and performs guidance functions.
+  * *Guidance* - Controls the attitude control components of the spacecraft, and performs guidance functions.
 
-MM ECS Environment Control System, or life support.
+  * *ECS* - Environment Control System, or life support.
 
-MM Deployable A capability that can deploy another module -- a parachute, for instance.
+  * *Deployable* - A capability that can deploy another module -- a parachute, for instance.
 
-MM Dockable Allows docking to the module at a given position.
+  * *Dockable* - Allows docking to the module at a given position.
 
-MM Camera Used as a positional reference for the 3D visual view. You can select from any of the cameras in a spacecraft as your viewpoint -- for example, you may have a camera looking out the cockpit, one looking out the docking hatch, and one on the outside hull facing aft.
+  * *Camera* - Used as a positional reference for the 3D visual view. You can select from any of the cameras in a spacecraft as your viewpoint -- for example, you may have a camera  looking out of the cockpit, one positioned from the docking hatch, and one on the outside hull facing aft.
 
-2.2 Event-Driven Model
+===2.2 Event-Driven Model===
 
 EXOFLIGHT uses a different execution model from most flight simulators -- an event-based model, rather than the traditional fixed time-slice model. A detailed overview of this model is given here: [http://www.flipcode.com/tfiles/steven03.shtml] The basic main loop of this type of simulation looks like this, in pseudo-code:
+
+{{{
 
 while (game_is_running)
 
@@ -131,6 +133,8 @@ while (game_is_running)
    current_time += time_step; 
 
 }
+
+}}}
 
 An event-based model is more complicated to implement, but provides some features not possible in a fixed-timeslice model. The main reason for using one in EXOFLIGHT is the neccessity to provide arbitrary time-acceleration without loss of accuracy. Some missions in EXOFLIGHT may take years to complete, and even a 32x acceleration option would be insufficient. You'd need over 1,000,000x acceleration for a usable sim, which is difficult to do in a time-slice model. With the event-based model, we get arbitrary time rates, from 1 s = 7 ms to 1 s = 1 yr.
 
