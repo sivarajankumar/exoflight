@@ -1,9 +1,0 @@
-EXOFLIGHT is a product poised precariously between entertainment, education, and simulation.  it is not a typical game in that is has no rigidly defined goal -- to some it is a test of piloting skills, to some it is a tool for designing new space vehicles, and to others it is a way to view the wonders of the solar system from the virtual cockpit of a virtual spaceship.
-
-to satisfy a wide range of desires by people using the product, it must be "wide" rather than "deep".  this was the guiding principle in designing this product.
-
-when i first began researching spacesim, i was merely a space enthusiast.  not even a high-level one -- i'd read some accounts of space history, understood the solar system and astronomy, and even launched a few model rockets.
-
-the main design goal for spacesim was not to create an accurate simulation of spaceflight, so much as to provide a realistic spaceflight *experience*.  what constitutes a realistic experience varies from person to person.  the major criteria is: can you suspend your disbelief, even for a short moment, and believe you are in that ship, gazing down at that planet?
-
-to achieve that suspension of disbelief requires many things working in concert -- sound, graphics, and simulation code.  however, it is important that aspects in the program are equally balanced so that a surplus in one feature does not expose a deficit in another.
