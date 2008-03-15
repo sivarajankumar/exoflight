@@ -1,0 +1,45 @@
+as some of you may or may not know, space travel is not at all like flying an airplane or driving an automobile.  in the movies, the heroes may point their space vehicle toward their destination and hit the boosters, but in space, it is not quite that simple.  this section will introduce you to the concepts of space flight, and before you know it, you'll be transcending your ground-dwelling mammal roots and thinking in 3 dimensions.
+
+even if you do know this fact, let me reiterate: space flight is *really* different. straight lines are all but useless in space travel.  in space, gravity bends the paths of all objects, so everything travels in curved paths.  to master space flight, you must start thinking in curves.  it is an elegant, if difficult to master, mode of travel.
+
+(history?)
+
+there are two main types of curves that objects travel.  one such type is called an "ellipse".  the paths of all of the planets and moons in the solar system form ellipses.  you may remember ellipses from high school geometry as "squashed circles".  well, that is more or less what they look like in space, except they're in 3 dimensions, not confined to a 2 dimensional piece of paper.  and they don't have to be squashed -- a perfect circle is a valid type of ellipse.
+
+an object in an elliptical orbit travels in a closed path, that is, it loops around and returns to where it started after a given period of time.  this time is called the "period" of the orbit.  for an example, the period of the earth's orbit around the sun is one year, and the period of the moon around the earth is about 28 days.
+
+the other type of curved path an object travels in is called a "hyperbola".  this is an open path, in that an object travelling such a path never returns to where it started.  in our solar system, only some comets and asteroids travel in hyperbolaes -- they swing around the sun and vanish, never to return.  also, the voyager space probes are travelling hyperbolic trajectories, and they also are leaving the solar system.
+
+earlier we talked about the period of an elliptical orbit as the time it takes an object to make one complete circuit.  a hyperbolic orbit never curves back upon itself, so we cannot talk about the period of a hyperbolic orbit -- it doesn't exist.
+
+(note about orbit terminilogy being used)
+
+but there are other numbers that apply to both types of paths.  as we will see, any elliptical or hyperbolic orbit can be described using just five numbers. these are called the "classical orbital elements", or "keplerian" elements, after the really smart scientist that hung out with newton and discovered all this stuff.
+(not to be confused with ___ book ... those were cosmological constants, we're talking about basic physics principles here)
+
+of the 5 parameters that describe an orbit, only one determines the shape of the orbit -- it is called the "eccentricity".  this parameter also determines whether the orbit is an ellipse or hyperbola.
+
+these diagrams might help you visualize what orbits with various eccentricity parameters look like.  at the lowest value, 0, the orbit is a perfect circle.  (this is just a mathematical definition -- the real world is more sloppy, and no orbit is really perfectly circular)  the earth travels in an almost circular orbit, with e=...
+
+as the eccentricity increases, the orbit gets more elliptical and "squished" (or "stretched", depending on how you think about it).  look at how the amount of "stretchiness" increases as the eccentricity approaches 1.  at very high values of e, for instance, e=0.99, the ellipse goes way off the page.  many comets in our solar system have high values of e, and thus travel a great distance from the sun before eventually swinging back many years later.
+
+at e>1, the orbit is no longer an ellipse.  it is now a hyperbola, and looks like something in this diagram:
+as e increases further, the hyperbola gets flatter and flatter, and at very high values of e, almost looks like a straight line.  very few objects in our solar system (besides maybe some types of atomic particles) have values of e greater than ... (explanation?)
+
+there is also a parameter which describes the size of the orbit.  acutally, there are several ways, but the most common is the "semi-major axis".  for a circular orbit, this is easy: this describes the radius of the circle.  (todo)
+
+now with those 2 params, we have a pretty good picture of what the orbit looks like.  the other 3 parameters describe the position of the orbit in space, or the "plane" of the orbit.
+
+let me explain what the "plane" of an orbit is.  with a and e, we could sketch a picture of the orbit on a really, really big sheet of paper.  we also make a pinhole at the focus of the orbit.  now with the other 3 parameters we are going to rotate the paper into the proper position.  whichever way we move the paper, the pinhole must go at the center of the planet.  think of an object tracing out the line on the paper as it moves, and you will have a pretty good idea of whats going on.
+
+so these last 3 params are just angles which describe the plane of the orbit.  probably the most important is the inclination, which is the angle the orbit's plane makes with the equator.  an orbit that travels directly above the equator has an inclination of 0 deg.  an orbit that loops up over the north pole and again over the south pole has 90 deg.  the orbit may also take any value in between, up to 180 deg.
+
+an interesting thing happens when the inclination is above 90 deg -- the orbit becomes a "retrograde" orbit.  most objects in the solar system travel in a counter clockwise fashion. ones that do not are called "retrograde".  an orbit with i=180 travels along the equator, but west-to-east instead of east-to-west. (better watch out for oncoming traffic!)
+
+the other two parameters are boring.
+
+oh!  i almost forgot the most important feature of an object in orbit -- most important for historical reasons, because its discovery led to the discovery of everything else weve just discussed (footnote?).  that is: the closer an object gets to the attracting body, the faster it goes.  so if an object is in a nearly circular orbit, it will travel at a more or less constant speed.  if it is in a highly eccentric orbit, like many comets are, it will spend most of its time piddling far away from the attracting body, then as it gets closer, it speeds up dramatically.
+
+in fact, for any given orbit, an object attains its fastest velocity at the closest point of its orbit -- this point is called the "apoapsis".  conversely, its slowest velocity is at the furthest point of its orbit, called "periapsis".
+
+note: you may have heard the terms apogee and perigee describing the furthest and closest points of an orbit.  this is true -- apogee is equiv to apoapsis, and pergiee is equiv to periapsis, but only if you're orbiting earth.  since this simulation lets you go anywhere in the solar system, its best to use the general terms apoapsis and periapsis, even though they sound weird.
