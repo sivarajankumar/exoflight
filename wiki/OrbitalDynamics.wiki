@@ -44,8 +44,7 @@ in fact, for any given orbit, an object attains its fastest velocity at the clos
 
 note: you may have heard the terms apogee and perigee describing the furthest and closest points of an orbit.  this is true -- apogee is equiv to apoapsis, and pergiee is equiv to periapsis, but only if you're orbiting earth.  since this simulation lets you go anywhere in the solar system, its best to use the general terms apoapsis and periapsis, even though they sound weird.
 
-= Maneuvering =
-
+== Maneuvering ==
 
 on our good old earth, it is common to express how far we can travel in terms of how much fuel we have. for instance: "how much gas do you have?" "about 50 miles." this is because for most types of terrestrial transportation, the more fuel you have. the farther you can go.
 
