@@ -1,3 +1,5 @@
+== Algorithms/Forumlas ==
+
 	// logarithm of a quaternion
 	// exponent quaternion of a vector
 	// from http://www.cs.technion.ac.il/~cs234326/projects/quaternion/quat_interpol_project.html
@@ -90,3 +92,15 @@ Vecmath library by Kenji Hiranabe, Eiwa System Management, Inc. http://www.objec
 ACME software: http://www.acme.com/java/software/
 
 Implementation of Lambert algorithm by Chris D'Souza January 20, 1989 (Verified by Darrel Monroe, 10/25/90) Thanks to Tim Crain and UT.
+
+== Data Files ==
+JPL - ephemeris, planet maps
+
+JHasting - planet maps
+
+Inspire3D - astronaut model (others?)
+	wasp, hopper...
+
+Other Models - engine of Titan-2, shuttle
+
+Darren Baker contributed the A-4 and Juno 1 models.
