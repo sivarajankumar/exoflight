@@ -103,4 +103,8 @@ Inspire3D - astronaut model (others?)
 
 Other Models - engine of Titan-2, shuttle
 
+== Contributors ==
+
 Darren Baker contributed the A-4 and Juno 1 models.
+
+Jen Harvey helped with testing and documentation.
