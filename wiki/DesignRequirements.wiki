@@ -301,8 +301,7 @@ CREW
 
 For this release, the crew are just bags of salty water and minerals that
 must be maintained at specific temperatures, pressures, and G-levels, fed
-and watered periodically, and given O2 to breathe.  Maybe we'll let 'em
-scream when they die.
+and watered periodically, and given O2 to breathe.
 
 --
 
