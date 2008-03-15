@@ -2,10 +2,6 @@
 	// exponent quaternion of a vector
 	// from http://www.cs.technion.ac.il/~cs234326/projects/quaternion/quat_interpol_project.html
 
-// Visit the ACME Labs Java page for up-to-date versions of this and other
-// fine Java utilities: http://www.acme.com/java/
-
-
 			// low-eccentricity formula from Meeus,  p. 195
 
 	// we want YPR (yaw-pitch roll) which is YXZ in our system
@@ -31,11 +27,6 @@ Lambert.java
 	solveBattan()
 	// Vallado, pgs 441-444
 
-	% * PROGRAMMER: Chris D'Souza
-	% *
-	% * DATE: January 20, 1989
-	% *
-	% * VERIFIED BY: Darrel Monroe, 10/25/90
 
 Matrix4d:
 	// Taken from Rick's which is taken from Wertz. pg. 412
@@ -90,3 +81,11 @@ IGMProgram:
 
 Heat on structures:
 						// Seifert & Brown, p. 458
+
+== Software ==
+
+Vecmath library by Kenji Hiranabe, Eiwa System Management, Inc. http://www.objectclub.jp/download/vecmath_e
+
+ACME software: http://www.acme.com/java/software/
+
+Implementation of Lambert algorithm by Chris D'Souza January 20, 1989 (Verified by Darrel Monroe, 10/25/90)
