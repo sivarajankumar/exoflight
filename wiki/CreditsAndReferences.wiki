@@ -5,13 +5,14 @@
 			// low-eccentricity formula from Meeus,  p. 195
 
 	// we want YPR (yaw-pitch roll) which is YXZ in our system
+{{{
+Euler angles, quaternions, and transformation matrices for space shuttle
+analysis
+19770019231 N (77N26175) 
+NASA-CR-151435  DN-1.4-8-020
+HC A03
+}}}
 
-	// these algorithms taken from NASA STI #77N26175,
-	// "Euler Angles, Quaternions, and Transformations
-	// Matrices for Space Shuttle Analysis"
-	// But unfortunately, there is an error in page 17,
-	// which contains the YXZ transformation that I use.
-	// (instead of atan(m31/m33), should be (m13/m33))
 
 		// this is from NASA TR X-58040
 		// "Apollo Lunar Descent and Ascent Trajectories"
