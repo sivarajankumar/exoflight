@@ -43,3 +43,27 @@ oh!  i almost forgot the most important feature of an object in orbit -- most im
 in fact, for any given orbit, an object attains its fastest velocity at the closest point of its orbit -- this point is called the "apoapsis".  conversely, its slowest velocity is at the furthest point of its orbit, called "periapsis".
 
 note: you may have heard the terms apogee and perigee describing the furthest and closest points of an orbit.  this is true -- apogee is equiv to apoapsis, and pergiee is equiv to periapsis, but only if you're orbiting earth.  since this simulation lets you go anywhere in the solar system, its best to use the general terms apoapsis and periapsis, even though they sound weird.
+
+= Maneuvering =
+
+
+on our good old earth, it is common to express how far we can travel in terms of how much fuel we have. for instance: "how much gas do you have?" "about 50 miles." this is because for most types of terrestrial transportation, the more fuel you have. the farther you can go.
+
+in space, this logic is turned on its head.  once you get into orbit, you are constantly in motion.  unless some other force acts upon your ship, you will keep orbiting indefinitely, in the same orbit.  so if your ship runs out of gas, you might be stuck up there a very long time!
+
+to change your orbit, you must apply thrust to your vehicle.  thrusting changes your velocity, and thus the shape of your orbit.  thus the more fuel you have. the greater the velocity change you can make, and the greater you can change your orbit.
+another way of saying "change in velocity" is the term "delta-v" (pronounc.)
+
+there is still another way to change your orbit. if you are orbiting a planet with an atmosphere (earth, for instance) you may encounter atmospheric drag.
+
+---
+
+so when astronauts want to change their orbit, they perform a velocity change.  how do they do this?  essentially, they point their spacecraft in one direction, and thrust their engines for a given duration of time.  this is called a "burn".
+
+how do they know what directino to point, and how long to burn the engine?  ah, that's the tricky part.  it all depends on what sort of change to their orbit they want to make.
+
+remember how we talked about an orbit having a specific size, shape, and plane?  well those are the three categories of changes an astronaut might want to make to their orbit.  we'll tslk first about changes only to the size and shape, which are called "nonplanar" because they do not affect the plane of the orbit.
+
+the easiest type of orbital maneuver is to change the altitude of apoapsis or periapsis of your orbit.  you must be at the opposite side of the part of the orbit you wish to change -- to change the apoapsis, you must perform a burn at periapsis.  conversely, to change periapsis you must burn at apoapsis.
+
+the direction in which you burn determines whether you raise or lower the desired portion of your orbit.  if you burn in the direction of your flight path, it raises the height.  if you burn against the flight path, it lowers the orbit.
