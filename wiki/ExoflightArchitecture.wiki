@@ -136,46 +136,46 @@ while (game_is_running)
 
 }}}
 
-An event-based model is more complicated to implement, but provides some features not possible in a fixed-timeslice model. The main reason for using one in EXOFLIGHT is the neccessity to provide arbitrary time-acceleration without loss of accuracy. Some missions in EXOFLIGHT may take years to complete, and even a 32x acceleration option would be insufficient. You'd need over 1,000,000x acceleration for a usable sim, which is difficult to do in a time-slice model. With the event-based model, we get arbitrary time rates, from 1 s = 7 ms to 1 s = 1 yr.
+An event-based model is more complicated to implement, but provides some features not possible in a fixed-timeslice model. The main reason for using one in EXOFLIGHT is the necessity of providing arbitrary time-acceleration without loss of accuracy. Some missions in EXOFLIGHT may take years to complete, and even a 32x acceleration option would be insufficient. You'd need over 1,000,000x acceleration for a usable sim, which is difficult to do in a time-slice model. With the event-based model, we get arbitrary time rates, from 1 s = 7 ms to 1 s = 1 yr.
 
 Changing the time rate does not change the behavior of the sim, which is a critical feature. If there is not enough CPU power available to run the simulator at the desired rate, the time rate is simply decreased until it is low enough for the CPU to handle.
 
-2.3 Trajectories
+===2.3 Trajectories===
 
 One of the main functions of EXOFLIGHT is to simulate the trajectories of space-bound objects. All objects in space follow a trajectory, and the act of determining the path of an object from a given time and state vector is called trajectory propogation. We have an object-oriented system in EXOFLIGHT for performing this function.
 
 Here are the various trajectory classes in EXOFLIGHT:
 
-MM Landed Describes an object that is stationary relative to a planet surface. Note that although the object is not moving with respect to the ground, it is moving in the EXOFLIGHT coordinate system (which is intertial) if the planet is rotating.
+  * *Landed* - Describes an object that is stationary relative to a planet surface. Note that although the object is not moving with respect to the ground, it is moving in the EXOFLIGHT coordinate system (which is inertial) if the planet is rotating.
 
-MM Conic Used when the object describes a standard 6-element Keplerian conic trajectory.
+  * *Conic* - Used when the object describes a standard 6-element Keplerian conic trajectory.
 
-MM PolyElements A variation of the Conic trajectory class, which allows each parameter to be of the form f(t) where f is a polynomial function, and t is time.
+  * *PolyElements* - A variation of the Conic trajectory class, which allows each parameter to be of the form f(t) where f is a polynomial function, and t is time.
 
-MM Cowell The trajectory of the object is integrated using an adaptive Runge-Kutta 4th order propogator. This is the most-commonly used trajectory for dynamic objects such as spaceships. The same propogator is used for atmospheric flight (which requires a small time-step) as is used for orbital flight (which can use a longer time-step). This is also where ground interaction is modeled.
+  * *Cowell* - The trajectory of the object is integrated using an adaptive Runge-Kutta 4th order propagator. This is the most commonly used trajectory for dynamic objects such as spaceships. The same propagator is used for atmospheric flight (which requires a small time-step) as is used for orbital flight (which can use a longer time-step). This is also where ground interaction is modeled.
 
-MM Ephemeris Uses the DE405 ephemeris from JPL to retrieve the state vectors of the major planets. The DE405 data files are stored on disk and loaded as-needed.
+  * *Ephemeris* - Uses the DE405 ephemeris from JPL to retrieve the state vectors of the major planets. The DE405 data files are stored on disk and loaded as-needed.
 
 Besides providing a state vector (position + velocity) the trajectory objects also track attitude and rotational velocity. This is done mostly in the CowellTrajectory class, and the trajectory switches off rotational integration when there is no torque applied to the spacecraft.
 
-2.4 User Interface
+===2.4 User Interface===
 
-The goals of the user interface design for EXOFLIGHT had many conflicting goals:
+The goals of the user interface design for EXOFLIGHT had many conflicting aspects:
 
-• The UI should be similar for different vehicles.
+  * The UI should be similar for different vehicles.
 
-• The UI should allow control of functions specific to a particular vehicle.
+  * The UI should allow control of functions specific to a particular vehicle.
 
-• The UI should invoke the feeling of actually controlling a spacecraft.
+  * The UI should invoke the feeling of actually controlling a spacecraft.
 
-A spacecraft in EXOFLIGHT can take different configurations based on what modules are attached.
+A spacecraft in EXOFLIGHT can take different configurations based on which modules are attached.
 
-2.5 Sequencer
+===2.5 Sequencer===
 
 The Exoflight Sequencer Language (ESL) provides a way to make flight programs for vehicles. In essence, it is a simple scripting language. Besides writing flight programs, it is good for scripting short sequences of actions. ESL sequences consist of a number of statements in linear order. Statements are executed in order until the sequence ends, the user halts the sequence, or if a statement fails.
 
-3 Conclusion
+==3 Conclusion==
 
-3.1 Lessons Learned
+===3.1 Lessons Learned===
 
-3.2 Changes to be Made
+===3.2 Changes to be Made===
