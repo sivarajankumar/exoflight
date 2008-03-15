@@ -1,6 +1,6 @@
 	// logarithm of a quaternion
 	// exponent quaternion of a vector
-	// from http://www.cs.technion.ac.il/Labs/Isl/projects_done/quaternion/quat_interpol_project.html
+	// from http://www.cs.technion.ac.il/~cs234326/projects/quaternion/quat_interpol_project.html
 
 // Visit the ACME Labs Java page for up-to-date versions of this and other
 // fine Java utilities: http://www.acme.com/java/
