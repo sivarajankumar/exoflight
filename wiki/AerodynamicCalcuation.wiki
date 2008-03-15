@@ -1,11 +1,15 @@
-
 If above ceiling, exit.
+
 Compute airstream velocity with (or without wind, if expendable)
+
 Compute atmosphere parameters at altitude.  
 
 Compute density, v^2 in meters.
+
 Compute mach = v/spdsound
+
 Transform to structure coordinates
+
 Compute vv = normalized velocity rel to airstream (0,0,1 = 0 alpha,beta)
 
 Calculate aerodynamic forces (struct.calculateDragCoeff())
