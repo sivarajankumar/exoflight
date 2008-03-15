@@ -1,89 +1,25 @@
 == Algorithms/Forumlas ==
 
-	// logarithm of a quaternion
-	// exponent quaternion of a vector
-	// from http://www.cs.technion.ac.il/~cs234326/projects/quaternion/quat_interpol_project.html
+Fundamentals of Astrodynamics and Applications by David A. Vallado (Author), Wayne D. McClain (Collaborator)
 
-			// low-eccentricity formula from Meeus,  p. 195
+Meeus, Astronomical Algorithms (low-eccentricity Kepler formula, p. 195)
 
-	// we want YPR (yaw-pitch roll) which is YXZ in our system
-{{{
 Euler angles, quaternions, and transformation matrices for space shuttle
-analysis
-19770019231 N (77N26175) 
-NASA-CR-151435  DN-1.4-8-020
-HC A03
-}}}
+analysis - 19770019231 N (77N26175)  NASA-CR-151435  DN-1.4-8-020 HC A03
 
+NASA TR X-58040, "Apollo Lunar Descent and Ascent Trajectories"
 
-		// this is from NASA TR X-58040
-		// "Apollo Lunar Descent and Ascent Trajectories"
-		// Ac = Ad - (6(V+Vd)/TGO) - (12*(R-Rd)/TGO^2)
-		// god knows why it works... :)
-		// todo: figure out what god knows
+Fundamentals of Astrodynamics
+by Roger R. Bate (Author), Donald D. Mueller (Author), Jerry E. White (Author)
 
-		// azimuth = asin(cos i/cos L)
-      // from BMW p. 142
+Peter Colwell, "Solving Kepler's Equation", pg 60
 
+NASA-TM-X-67218, "Project/Space Shuttle - Space shuttle guidance, navigation and
+control design equations, volume 1"
 
-Lambert.java
-	solveBattan()
-	// Vallado, pgs 441-444
+Ballistic missile and space vehicle systems by Seifert & Brown (heat on structure, p. 458)
 
-
-Matrix4d:
-	// Taken from Rick's which is taken from Wertz. pg. 412
-	// Bug Fixed and changed into right-handed by hiranabe
-
-
-  * Perturbation for the J2 harmonic.
-  * Vallado, pg. 528
-
-  * Perturbation for 3rd body perturbations (besides the primary body).
-  * Vallado, pg. 515
-
-  * Constants
-  * JGM-2
-  * Vallado, pg. 94-96, appendix, various
-
-	  * Simple Newton-method-based solver, from Vallado pg. 232.
-	  * Only handles 0 <= ecc < 1
-
-Kepler equation:
-
-			// low-eccentricity formula from Meeus,  p. 195
-
-	public static double solveNearParabolic(double e, double M)
-	{
-		// series solution
-		// Vallado pg 240
-
-		// Vallado p 236
-		// solve cubic for parabolic ecc.
-
-		// apply Simpson's correction
-		// Peter Colwell, "Solving Kepler's Equation", pg 60
-
-	  * See if two objects (ut1 & ut2) can see each other without being
-	  * obstructed by a third object (ut3)
-	  * ut1 or ut2 can be null (representing universe origin), but not ut3.
-	  * Source: Vallado pg 198-201
-
-			// true argument of latitude (arg of periapsis + true anomoly)
-			// Vallado pg 137
-
-IGMProgram:
-
-  * A guidance program that implements a linear parametric
-  * guidance algorithm as described in NASA-TM-X-67218,
-  * "Project/Space Shuttle - Space shuttle guidance, navigation and
-  * control design equations, volume 1"
-
-		// azimuth = asin(cos i/cos L)
-      // from BMW p. 142
-
-Heat on structures:
-						// Seifert & Brown, p. 458
+Quaternion Logarithm/Exponent from http://www.cs.technion.ac.il/~cs234326/projects/quaternion/quat_interpol_project.html
 
 == Software ==
 
