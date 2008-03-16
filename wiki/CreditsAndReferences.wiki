@@ -43,13 +43,10 @@ James Hastings-Trew - planet maps
 
   http://planetpixelemporium.com/planets.html
 
-Inspire3D - astronaut model (others?)
-	wasp, hopper...
+=== 3D Models ===
 
-Other Models - engine of Titan-2, shuttle
+Guttyr contributed cool-as-heck A-4, Juno 1, SRB and Saturn V models.
 
 == Contributors ==
-
-Darren Baker contributed cool-as-heck A-4 and Juno 1 models.
 
 Much thanks to Jen Harvey for help with testing and documentation.
