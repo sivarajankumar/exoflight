@@ -1,3 +1,9 @@
+== 3D Models ==
+
+Guttyr spent many hours pounding out cool-as-heck A-4, Juno 1, SRB, Gemini/Titan 2 and Saturn V models (among others).
+
+Mark Piatowski contributed very nice and detailed S1B, CSM, and Explorer I models.
+
 == Algorithms/Forumlas ==
 
 Fundamentals of Astrodynamics and Applications by David A. Vallado (Author), Wayne D. McClain (Collaborator)
@@ -42,12 +48,6 @@ NASA - sound files, photos
 James Hastings-Trew - planet maps
 
   http://planetpixelemporium.com/planets.html
-
-=== 3D Models ===
-
-Guttyr spent many hours pounding out cool-as-heck A-4, Juno 1, SRB, Gemini/Titan 2 and Saturn V models (among others).
-
-Mark Piatowski contributed very nice and detailed S1B, CSM, and Explorer I models.
 
 == Contributors ==
 
