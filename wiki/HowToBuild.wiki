@@ -2,4 +2,6 @@ First go to http://code.google.com/p/flcore/ and build the FLCore library. Be su
 
 While you're doing that, download the texture maps. You'll need the "basemaps-low.zip" and "gtlmap.zip" files from the [http://code.google.com/p/exoflight/downloads/list Downloads] section. You can also get high resolution elevation maps and surface maps if you wish. Put all these files in the `Exoflight/resource` directory.
 
-Then build Exoflight and run the 'ant run' task.
+Then run the `unpack` and `jar` Ant tasks to unpack the .zip files and build the source code.
+
+When done run the `run` Ant task to start the sim.
