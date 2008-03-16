@@ -1,6 +1,6 @@
 == 3D Models ==
 
-Guttyr spent many hours pounding out cool-as-heck A-4, Jupiter C, Juno 1, SRB, Gemini/Titan 2 and Saturn V models (among others).
+Darren "Guttyr" Baker spent many hours pounding out cool-as-heck A-4, Jupiter C, Juno 1, SRB, Gemini/Titan 2 and Saturn V models (among others).
 
 Mark Piatowski contributed very nice and detailed S1B and CSM models, plus textures for Jupiter C.
 
