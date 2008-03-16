@@ -30,9 +30,18 @@ ACME software: http://www.acme.com/java/software/
 Implementation of Lambert algorithm by Chris D'Souza January 20, 1989 (Verified by Darrel Monroe, 10/25/90) Thanks to Tim Crain and UT.
 
 == Data Files ==
-JPL - ephemeris, planet maps
 
-JHasting - planet maps
+JPL/Caltech/USGS - ephemeris, planet maps
+
+  http://maps.jpl.nasa.gov/
+
+NASA - sound files, photos
+
+  http://science.ksc.nasa.gov/history/
+
+James Hastings-Trew - planet maps
+
+  http://planetpixelemporium.com/planets.html
 
 Inspire3D - astronaut model (others?)
 	wasp, hopper...
