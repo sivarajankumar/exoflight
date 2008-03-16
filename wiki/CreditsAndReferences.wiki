@@ -45,7 +45,9 @@ James Hastings-Trew - planet maps
 
 === 3D Models ===
 
-Guttyr contributed cool-as-heck A-4, Juno 1, SRB and Saturn V models.
+Guttyr contributed cool-as-heck A-4, Juno 1, SRB and Saturn V models (among others).
+
+Mark Piatowski contributed very nice S1B, CSM, and Explorer I models.
 
 == Contributors ==
 
