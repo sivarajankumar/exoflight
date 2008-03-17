@@ -1,35 +1,3 @@
-A historically-based and future-looking spaceflight simulator. The player
-can fly several space vehicles and rockets, travel to the bodies of the
-solar system, and complete a variety of missions.
-
-Features:
-
-- Fly several spacecraft from history and the future, including the 
-  Apollo spacecraft, Saturn V, and space shuttle.
-
-- Breathtaking 3D views of the solar system.  Planets and moons are
-  accurately modeled, including terrain and atmosphere.
-
-- Realistic orbital mechanics -- to complete missions successfully
-  you must plan your trajectory carefully, as well as watch your
-  fuel.
-
-- Design your own rockets, space vehicles, and space stations
-  by connecting different modules.
-
-- Complete challenging missions like moon landings, space rescues,
-  and comet interceptions.  Save the day by recovering from a 
-  spacecraft malfunction.
-
-- Open architecture -- add new spacecraft, modules, instrument 
-  panels, planets, and more from fellow users.  Import TLE data 
-  from NASA and play with the satellites in orbit!
-
-- Large ###-page manual to explain how the heck to play this
-  silly thing.
-
---
-
 GAMEPLAY
 
 There are several modes of game play:
