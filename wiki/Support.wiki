@@ -1,1 +1,1 @@
-For support, your best bets are to look at the [FAQ] and the [Issues http://code.google.com/p/exoflight/issues/list] list.
+For support, your best bets are to look at the [FAQ] and the [http://code.google.com/p/exoflight/issues/list List of Issues].
