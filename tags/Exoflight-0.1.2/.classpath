@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="/FLCore"/>
+	<classpathentry kind="lib" path="/FLCore/bin"/>
+	<classpathentry kind="lib" path="/FLCore/lib/png.jar"/>
+	<classpathentry kind="lib" path="/FLCore/lib/junit.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="data"/>
+	<classpathentry kind="lib" path="/FLCore/lib/macosx-universal/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="/FLCore/lib/macosx-universal/jinput.jar"/>
+	<classpathentry kind="lib" path="/FLCore/lib/macosx-universal/jinput-test.jar"/>
+	<classpathentry kind="lib" path="/FLCore/lib/macosx-universal/joal.jar"/>
+	<classpathentry kind="lib" path="/FLCore/lib/macosx-universal/jogl.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
