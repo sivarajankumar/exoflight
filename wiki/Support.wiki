@@ -1,3 +1,8 @@
 == I don't see files automatically getting downloaded after startup. ==
 
 If you are behind a proxy your best bet is to download them manually. Go to the [http://code.google.com/p/exoflight/downloads/list Downloads] tab and download all the .zip files with the "Required" tag. Then unzip them all to the `C:\Program Files\Exoflight` directory (on Windows) or the `Exoflight.app/Contents/Resources` directory (Mac OS X).
+
+== I don't see an Exoflight shortcut in the Start Menu, just the Uninstaller. ==
+
+This is a problem with Windows XP and version 0.1.2, it will be fixed. In the meantime just start `C:\Program Files\Exoflight\Exoflight.exe` manually.
+ 
