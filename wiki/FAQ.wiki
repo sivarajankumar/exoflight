@@ -1,5 +1,4 @@
 #labels Featured
-= Frequently Asked Questions =
 
 === I don't see files automatically getting downloaded after startup. ===
 
