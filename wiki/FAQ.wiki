@@ -11,5 +11,5 @@ If you are behind a proxy your best bet is to download them manually. Go to the 
 
 === I don't see an Exoflight shortcut in the Start Menu, just the Uninstaller. ===
 
-This is a problem with Windows XP and version 0.1.2, it will be fixed. In the meantime just start `C:\Program Files\Exoflight\Exoflight.exe` manually.
+This is a problem with Windows XP and version 0.1.2, it will be fixed. In the meantime just start `C:\Program Files\Exoflight\Exoflight.exe` manually or create a shortcut to it.
  
