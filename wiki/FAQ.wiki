@@ -9,7 +9,7 @@ If you're astrodynamically-inclined, you could also take a shot at making custom
 
 If you are behind a proxy your best bet is to download them manually. Go to the [http://code.google.com/p/exoflight/downloads/list Downloads] tab and download all the .zip files with the "Required" tag. Then unzip them all to the `C:\Program Files\Exoflight` directory (on Windows) or the `Exoflight.app/Contents/Resources` directory (Mac OS X).
 
-If you create a file called ".X.tag" (where "X" is the name of the zip file) it won't try to download them again.
+If you create a file called `.X.tag` (where `X` is the name of the zip file) it won't try to download them again.
 
 === I don't see an Exoflight shortcut in the Start Menu, just the Uninstaller. ===
 
