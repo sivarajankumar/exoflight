@@ -49,6 +49,8 @@ James Hastings-Trew - planet maps
 
   http://planetpixelemporium.com/planets.html
 
+Some of the vehicle/launch site descriptions were taken from Wikipedia.
+
 == Contributors ==
 
 Much thanks to Jen Harvey for help with testing and documentation.
