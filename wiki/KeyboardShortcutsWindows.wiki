@@ -37,31 +37,13 @@
  
 || Menu+Q  || Dialog:Exit || 
  
-|| 0x26  || Control:Translate +Y || 
-|| Up+0x26  || Control:Translate Y Null ||
-|| 0x28  || Control:Translate -Y ||
-|| Up+0x28  || Control:Translate Y Null ||
-|| 0x25  || Control:Translate +X ||
-|| Up+0x25  || Control:Translate X Null ||
-|| 0x27  || Control:Translate -X || 
-|| Up+0x27  || Control:Translate X Null || 
-|| 0x21  || Control:Translate +Z || 
-|| Up+0x21  || Control:Translate Z Null || 
-|| 0x24  || Control:Translate -Z || 
-|| Up+0x24  || Control:Translate Z Null || 
- 
-|| Shift+0x26  || Control:Slow Translate +Y ||
-|| Shift+Up+0x26  || Control:Translate Y Null ||
-|| Shift+0x28  || Control:Slow Translate -Y ||
-|| Shift+Up+0x28  || Control:Translate Y Null ||
-|| Shift+0x25  || Control:Slow Translate +X ||
-|| Shift+Up+0x25  || Control:Translate X Null ||
-|| Shift+0x27  || Control:Slow Translate -X || 
-|| Shift+Up+0x27  || Control:Translate X Null || 
-|| Shift+0x21  || Control:Slow Translate +Z || 
-|| Shift+Up+0x21  || Control:Translate Z Null || 
-|| Shift+0x24  || Control:Slow Translate -Z || 
-|| Shift+Up+0x24  || Control:Translate Z Null || 
+|| Keypad-Up  || Control:Translate +Y || 
+|| Keypad-Down  || Control:Translate -Y ||
+|| Keypad-Right  || Control:Translate +X ||
+|| Keypad-Left  || Control:Translate -X || 
+|| Keypad-PgUp  || Control:Translate +Z || 
+|| Keypad-Home  || Control:Translate -Z || 
+|| (with Shift) || (slow rate of translation) || 
  
 || Menu+1  || Control:Throttle Off || 
 || Menu+5  || Control:Throttle 50% || 
