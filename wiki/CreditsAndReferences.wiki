@@ -4,6 +4,8 @@ Darren "Guttyr" Baker spent many hours pounding out cool-as-heck A-4, Jupiter C,
 
 Mark Piatowski contributed very nice and detailed S1B and CSM models, plus textures for Jupiter C.
 
+Space Truck from: http://www.dmi3d.com/models/fairmont.zip
+
 == Algorithms/Forumlas ==
 
 Fundamentals of Astrodynamics and Applications by David A. Vallado (Author), Wayne D. McClain (Collaborator)
