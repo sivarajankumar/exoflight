@@ -7,8 +7,9 @@ Features I'd like:
 
 Add more satellites ("air traffic") depending on era
 
-Easier way to navigate between planets
- * Gravity assist
+Easier navigation between planets
+ * Visualization on trajectories
+ * Gravity assist optimization
 
 == Simulation ==
 Improve integrator behavior
