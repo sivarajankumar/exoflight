@@ -4,7 +4,7 @@ Darren "Guttyr" Baker spent many hours pounding out cool-as-heck A-4, Jupiter C,
 
 Mark Piatowski contributed very nice and detailed S1B and CSM models, plus textures for Jupiter C.
 
-Some models were unashamedly ripped from Celestia, an open-source planetarium (http://www.shatters.net/celestia/)
+Hubble models were unashamedly ripped from Celestia, an open-source planetarium (http://www.shatters.net/celestia/)
 
 Space Truck station wagon from: http://www.dmi3d.com/models/fairmont.zip
 
