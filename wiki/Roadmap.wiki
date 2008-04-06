@@ -5,11 +5,15 @@ Features I'd like:
  * Shuttle
  * space probes (Voyager, Pathfinder, Cassini/Hyugens, etc)
 
+Variations of missions with malfunctions, alternatives
+
 Add more satellites ("air traffic") depending on era
 
 Easier navigation between planets
  * Visualization on trajectories
  * Gravity assist optimization
+
+RF simulation
 
 == Simulation ==
 Improve integrator behavior
