@@ -1,0 +1,29 @@
+Features I'd like:
+
+== Missions ==
+ * Apollo
+ * Shuttle
+ * space probes (Voyager, Pathfinder, Cassini/Hyugens, etc)
+
+Add more satellites ("air traffic") depending on era
+
+Easier way to navigate between planets
+ * Gravity assist
+
+== Simulation ==
+Improve integrator behavior
+
+Improve atmospheric simulation
+
+Better guidance controls
+
+== Graphics ==
+Add normal mapping to planets and advanced shaders
+
+More models
+
+More advanced terrain confabulation
+
+Volume rendering of clouds/atmosphere
+
+Better atmospheric refraction simulation
