@@ -32,3 +32,13 @@ More advanced terrain confabulation
 Volume rendering of clouds/atmosphere
 
 Better atmospheric refraction simulation
+
+Virtual cockpits
+
+Better camera views/external views
+
+Modeled space bases
+
+== UI ==
+
+HUD
