@@ -1,9 +1,9 @@
 #labels Featured
 === What do I do with this? ===
 
-Good question. As of version 0.1.3 there is a "Free Flight" mission which loads when Exoflight starts. This features the Space Wagon, which is good for just puttering around. Use the arrow keys (or joystick) for attitude control, and Shift+arrow keys for translation control. Pgup/Home bank left and right, and Shift+Pgup/Home thrust forward/back. Shift+1, Shift+5, and Shift+0 are 0/50%/100% throttle respectively. The function keys F1-F6 take you through the various views, most of which you can drag with the mouse, or press "C" to cycle through the camera/cockpit views.
+Good question. As of version 0.1.3 there is a "Free Flight" mission which loads when Exoflight starts. This features the Space Wagon, which is good for just puttering around. Look at the KeyboardShortcuts page to get started.
 
-But the best way to learn your way around the simulator right now is to try the Gemini Missions (Ctrl-N). These are four missions that take you through the phases of launch, interception, docking, and reentry. Just follow the on-screen directions.
+But the best way to learn your way around the simulator right now is to try the Gemini Missions (Ctrl-N). These are four tutorial missions that take you through the phases of launch, interception, docking, and reentry. Just follow the on-screen directions.
 
 You could also try the `File | Custom Mission` (the menu pops down from the top in Windows) or `File | Set Location` to place your to place a spaceship at an arbitrary location in the Solar System and mess around.
 
