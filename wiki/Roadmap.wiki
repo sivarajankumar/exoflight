@@ -10,10 +10,12 @@ Variations of missions with malfunctions, alternatives
 Add more satellites ("air traffic") depending on era
 
 Easier navigation between planets
+ * "Flight plan" wizard
  * Visualization on trajectories
  * Gravity assist optimization
 
 RF simulation
+ * SoL communication to unmanned probes
 
 == Simulation ==
 Improve integrator behavior
@@ -42,3 +44,15 @@ Modeled space bases
 == UI ==
 
 HUD
+
+Virtual cockpit
+
+== Addons ==
+
+SDK
+
+Convert from other model/data formats
+ * Meshes
+ * Vehicle configs
+
+Planet builder
