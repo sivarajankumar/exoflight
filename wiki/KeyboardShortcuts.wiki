@@ -1,0 +1,71 @@
+#summary Keyboard Shortcuts
+
+|| F  || Time:Faster || Speed up time by one level. ||
+|| S  || Time:Slower || Slow down time by one level, down to real-time (1 s = 1 s). ||
+|| Shift+F  || Time:Maximum || Set time to maximum. ||
+|| Shift+Alt+F  || Time:Super Fast || Set time to "way beyond maximum". ||
+|| Shift+S  || Time:Minimum || Set time to real-time. ||
+|| Shift+Alt+S  || Time:Slow Motion || Set time to slow motion. ||
+|| Shift+Ctrl+Alt+S  || Time:Super-Slow Motion || Set time to the minimum simulatable time unit.||
+|| P  || Time:Pause || Pause time. ||
+|| Shift+P  || Time:Unpause || Unpause time. ||
+
+|| Z  || Visual:Zoom In || Zoom in on the visual view. ||
+|| X  || Visual:Zoom Out || Zoom out of the visual view. ||
+|| Shift+Z  || Visual:Move In || Move closer to the tracked object (external view) ||
+|| Shift+X  || Visual:Move Out || Move further away from the tracked object (external view ) ||
+
+||  ||
+|| Menu+Z  || Tactical:Zoom In || Zoom in on the tactical view. ||
+|| Menu+X  || Tactical:Zoom Out || Zoom out of the tactical view. ||
+||  ||
+|| Alt+Z  || Ground Track:Zoom In || Zoom in on the ground track. ||
+|| Alt+X  || Ground Track:Zoom Out || Zoom out of the ground track. ||
+
+|| Shift+1  || Display:Launch Config || Switch to the "Launch/Reentry" panel over the MEDS  (or use the switch) ||
+|| Shift+2  || Display:Landing Config || Switch to the "Landing/Docking" panel. ||
+
+|| F1  || Display:Groundtrack Mode ||
+|| F2  || Display:Half Visual Mode ||
+|| F3  || Display:Half Tactical Mode ||
+|| F4  || Display:Tactical View || 
+|| F5  || Display:Full Visual View ||  
+|| F6  || Display:Structure View ||
+ 
+|| Menu+A  || Sequencer:Abort || 
+ 
+|| Menu+Q  || Dialog:Exit || 
+ 
+|| Keypad-Up  || Control:Translate +Y || 
+|| Keypad-Down  || Control:Translate -Y ||
+|| Keypad-Right  || Control:Translate +X ||
+|| Keypad-Left  || Control:Translate -X || 
+|| Keypad-PgUp  || Control:Translate +Z || 
+|| Keypad-Home  || Control:Translate -Z || 
+|| (with Shift) || (slow rate of translation) || 
+ 
+|| Menu+1  || Control:Throttle Off || 
+|| Menu+5  || Control:Throttle 50% || 
+|| Menu+0  || Control:Throttle 100% ||  
+ 
+|| N  || Visual:Toggle Night Vision ||  
+|| D  || Visual:Toggle Show Decals ||
+|| C  || Visual:Next Camera ||  
+|| Shift+C  || Visual:Prev Camera || 
+ 
+|| Menu+N  || Dialog:New Mission ||
+|| Menu+Shift+P  || Dialog:Set Position ||
+ 
+|| Menu+M  || Display:Toggle Messages ||
+|| Menu+Shift+M  || Display:Toggle Console ||
+ 
+|| Menu+T  || Select:Clear Target ||
+ 
+|| Menu+G  || Guidance:Set Active ||
+|| Shift+Menu+G  || Guidance:Set Inactive ||
+|| Menu+B  || Guidance:Set Band Hi ||
+|| Shift+Menu+B  || Guidance:Set Band Lo ||
+|| Menu+D  || Guidance:RCS Direct On ||
+|| Shift+Menu+D  || Guidance:RCS Direct Off ||
+|| Menu+O  || Guidance:Attitude Hold ||
+|| Shift+Menu+O  || Guidance:Attitude Auto ||
