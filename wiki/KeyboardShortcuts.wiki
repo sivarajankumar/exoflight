@@ -41,9 +41,9 @@ NOTE: "Menu" means "Ctrl" on Windows, "Apple key" on OS X.
 || Shift+Keypad-Left  || Control:Translate -X || 
 || Shift+Keypad-PgUp  || Control:Translate +Z || 
 || Shift+Keypad-Home  || Control:Translate -Z || 
-|| Menu+1  || Control:Throttle Off || 
-|| Menu+5  || Control:Throttle 50% || 
-|| Menu+0  || Control:Throttle 100% ||   
+|| Ctrl+1  || Control:Throttle Off || 
+|| Ctrl+5  || Control:Throttle 50% || 
+|| Ctrl+0  || Control:Throttle 100% ||   
 || N  || Visual:Toggle Night Vision ||  
 || D  || Visual:Toggle Show Decals ||
 || C  || Visual:Next Camera ||  
