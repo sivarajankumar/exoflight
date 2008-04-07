@@ -1,5 +1,7 @@
 #summary Keyboard Shortcuts
 
+NOTE: "Menu" means "Ctrl" on Windows, "Apple key" on OS X.
+
 || F  || Time:Faster ||
 || S  || Time:Slower ||
 || Shift+F  || Time:Maximum ||
