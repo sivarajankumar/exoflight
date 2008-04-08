@@ -1,9 +1,23 @@
-== Introduction ==
+= Introduction =
 
 The Exoflight Sequencer Language (ESL) provides a way to make flight programs for vehicles. In essence, it is a simple scripting language. Besides writing flight programs, it is good for scripting short sequences of actions. 
 ESL sequences consist of a number of statements in linear order. Statements are executed in order until the sequence ends, the user halts the sequence, or if a statement fails. 
 
-Note: ESL is not meant to be a full-featured programming language -- it is easy enough and much more efficient to write Java class files and bind them to ESL scripts. It is simply meant to sequence steps of simple operations together (i.e. "checklists").
+Note: ESL is not meant to be a full-featured programming language -- it is simply meant to sequence steps of simple operations together (i.e. "checklists"). If there is a feature ESL cannot implement it is simple and much more efficient to write Java class files and bind them to ESL scripts.
+
+The  primary uses of ESL are:
+
+== Initialization ==
+
+ESL is a simple way to configure various program parameters. The "init" directory contains scripts for building the solar system objects.
+
+== Missions ==
+
+Exoflight missions are defined in ESL. This includes defining the vehicles involved, their initial positions, and their systems. The sequence can then automate the mission, waiting on conditions or event times, and/or give feedback to the user during events. These live in the `missions` directory.
+
+== Programs ==
+
+Each vehicle's module has a number of ModulePrograms. These are sequences designed to implement various phases of flight. Typically defined are launch, reentry, docking, intercept, landing.
 
 = Syntax =
 
