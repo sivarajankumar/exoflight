@@ -1,5 +1,11 @@
+== Introduction ==
+
 The Exoflight Sequencer Language (ESL) provides a way to make flight programs for vehicles. In essence, it is a simple scripting language. Besides writing flight programs, it is good for scripting short sequences of actions. 
 ESL sequences consist of a number of statements in linear order. Statements are executed in order until the sequence ends, the user halts the sequence, or if a statement fails. 
+
+Note: ESL is not meant to be a full-featured programming language -- it is easy enough and much more efficient to write Java class files and bind them to ESL scripts. It is simply meant to sequence steps of simple operations together (i.e. "checklists").
+
+= Syntax =
 
 Each statement is terminated by a semicolon. Descriptions and labels are prefixes of statements and do not require semicolons. 
 
