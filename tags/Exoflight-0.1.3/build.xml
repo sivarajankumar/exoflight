@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+
+<project name="Exoflight" default="jar">
+
+<property file="build.properties" />
+<property file="../FLCore/build.properties" />
+
+<property name="project.name" value="Exoflight" />
+<property name="depend.dir" value="../FLCore" />
+<property name="shared.dir" value="../FLCore" />
+
+<property name="jogl.platform" value="windows-i586" />
+<property name="models.dir" value="data/models" />
+
+<property name="exoflight.version" value="0.1.3"/>
+
+<property name="exo.fullscreen" value="true"/>
+	
+<path id="libs.path">
+	<pathelement location="../FLCore/bin" />
+	<pathelement location="../FLCore/lib/${jogl.platform}/jogl.jar" />
+	<pathelement location="../FLCore/lib/${jogl.platform}/gluegen-rt.jar" />
+	<pathelement location="../FLCore/lib/${jogl.platform}/joal.jar" />
+	<pathelement location="../FLCore/lib/${jogl.platform}/jinput.jar" />
+	<pathelement location="../FLCore/lib/png.jar" />
+	<pathelement location="../FLCore/lib/junit.jar" />
+	<pathelement location="./data" />
+	<pathelement location="./bin" />
+</path>
+
+<!-- clean -->
+
+<target name="clean">
+	<ant antfile="${shared.dir}/build.xml" target="clean" />
+	<delete dir="${models.dir}" includes="*.esm" />
+	<delete dir="./dist" />
+</target>
+
+<target name="clean-all" depends="clean">
+	<ant antfile="${depend.dir}/build.xml" target="clean-all" dir="${depend.dir}" inheritAll="no" />
+</target>
+
+<!-- compile -->
+
+<target name="all" depends="jar,compile-lwo">
+</target>
+
+<target name="compile">
+	<ant antfile="${depend.dir}/build.xml" dir="${depend.dir}" inheritAll="no" />
+	<ant antfile="${shared.dir}/build.xml" target="compile">
+		<reference refid="libs.path" />
+	</ant>
+</target>
+
+<!-- jar -->
+
+<target name="jar" depends="compile">
+	<ant antfile="${depend.dir}/build.xml" dir="${depend.dir}" inheritAll="no" />
+	<ant antfile="${shared.dir}/build.xml" target="jar" />
+</target>
+
+<!-- compile-lwo -->
+
+<target name="compile-lwo">
+<mkdir dir="data/models" />
+<apply executable="${java.home}/bin/java" dest="${models.dir}" parallel="false">
+  <arg value="-cp"/>
+  <arg value="../FLCore/bin"/>
+  <arg value="com.fasterlight.model.LWOReader" />
+  <srcfile/>
+  <arg value="-o"/>
+  <targetfile/>
+  <fileset dir="${models.dir}" includes="*.lwo"/>
+  <mapper type="glob" from="*.lwo" to="../../data/models/*.esm"/>
+</apply>
+</target>
+
+<!-- unzip resources -->
+
+<target name="unpack">
+	<unzip dest="./data">
+	    <fileset dir="resource">
+	        <include name="**/*.zip"/>
+	    </fileset>
+	</unzip>
+</target>
+	
+<!-- test -->
+
+<target name="test" depends="compile">
+	<ant antfile="${shared.dir}/build.xml" target="test">
+		<reference refid="libs.path" />
+	</ant>
+</target>
+
+<target name="test-all" depends="test">
+	<ant antfile="${depend.dir}/build.xml" target="test-all" dir="${depend.dir}" inheritAll="no" />
+</target>
+
+<!-- run -->
+
+<target name="run-class">
+
+	<java classname="${run.class}" fork="yes">
+		<classpath refid="libs.path" />
+		<sysproperty key="java.library.path" value="../FLCore/lib/${jogl.platform}" />
+
+		<jvmarg value="-agentlib:hprof=cpu=samples,monitor=y" />
+<!--
+		<jvmarg value="-verbose" />
+		<sysproperty key="exo.scrnwidth" value="1024" />
+		<sysproperty key="exo.scrnheight" value="768" />
+-->
+		<sysproperty key="exo.fullscreen" value="${exo.fullscreen}" />
+		<sysproperty key="apple.laf.useScreenMenuBar" value="true" />
+		<sysproperty key="com.apple.mrj.application.apple.menu.about.name" value="Exoflight" />
+<!--
+		<arg value="-stdout" />
+		<arg value="stdout.log" />
+		<arg value="-stderr" />
+		<arg value="stderr.log" />
+-->
+<!--
+		<jvmarg value="-Xdock:icon=data/etc/Exoflight.icns" />
+-->
+		<arg value="${arg.1}" />
+	</java>
+
+</target>
+
+<target name="run">
+	<antcall target="run-class">
+		<param name="run.class" value="com.fasterlight.exo.main.Exoflight" />
+	</antcall>
+</target>
+
+<target name="run-roam">
+	<antcall target="run-class">
+		<param name="run.class" value="com.fasterlight.exo.newgui.roam.TestPlanet" />
+	</antcall>
+</target>
+
+<target name="run-test1">
+	<antcall target="run-class">
+		<param name="run.class" value="com.fasterlight.glout.Test1" />
+	</antcall>
+</target>
+
+<!-- install -->
+
+<target name="install-common">
+	<delete dir="${install.dir}" />
+	<mkdir dir="${install.dir}" />
+
+	<mkdir dir="${install.dir}/lib" />
+	<copy todir="${install.dir}/lib" file="Exoflight.jar" />
+	<copy todir="${install.dir}/lib" file="../FLCore/FLCore.jar" />
+	<copy todir="${install.dir}/lib">
+		<fileset dir="../FLCore/lib/${jogl.platform}" includes="*.dll,*.jar,*.jnilib,*.so" />
+		<fileset dir="../FLCore/lib" includes="png.jar" />
+	</copy>
+
+	<copy todir="${install.dir}">
+		<fileset dir="./data"
+			excludes="elevtexs/**,texs/**,sounds/**,models/**,eph/**,uitexs/**" />
+	</copy>
+	<copy todir="${install.dir}">
+		<fileset dir="./data"
+			includes="sounds/*.txt,texs/*/*.txt" />
+	</copy>
+	
+	<!-- these aren't ready yet -->
+	<copy tofile="${install.dir}/missions/default.ini" 
+		file="${install.dir}/missions/shipping.ini" overwrite="true"/>
+	<delete file="${install.dir}/missions/shipping.ini" />
+
+	<!-- scripts -->
+	<copy todir="${install.dir}">
+		<!-- <fileset dir="./scripts" includes="*.bat,*.sh" /> -->
+		<fileset dir="./doc" includes="*.txt" />
+	</copy>
+	
+</target>
+
+<target name="install-win32" depends="jar">
+	<!-- win32 launcher builder -->
+	<!-- this task may have to be commented out on non-windows platforms -->
+	<taskdef name="launch4j"
+	    classname="net.sf.launch4j.ant.Launch4jTask"
+	    classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
+
+	<antcall target="install-common">
+		<param name="jogl.platform" value="windows-i586" />
+		<param name="install.dir" value="dist/windows-i586" />
+	</antcall>
+	<!-- win32 launcher -->
+	<launch4j configFile="./launch4j.xml" />
+	<!-- build final dist archives -->
+	<zip
+		destfile="dist/Exoflight-${exoflight.version}-windows-i586.zip"
+		basedir="dist/windows-i586" />
+</target>
+
+<target name="install-macosx" depends="jar">
+	<antcall target="install-common">
+		<param name="jogl.platform" value="macosx-universal" />
+		<param name="install.dir" value="dist/macosx-universal" />
+	</antcall>
+	<!-- os x launcher builder -->
+	<!-- this task may have to be commented out on non-osx platforms -->
+	<taskdef name="jarbundler" 
+	    classname="net.sourceforge.jarbundler.JarBundler" 
+	    classpath="${jarbundler.dir}/jarbundler-1.9.jar" />		
+	<!--
+	if this fails with a NoClassDefFoundError
+	you should add 'xercesimpl.jar' and 'xml-apis.jar' in the ANT 'lib' directory.
+	-->
+	<jarbundler dir="dist"
+		name="Exoflight"
+		mainclass="com.fasterlight.exo.main.Exoflight"
+		arguments="-stdout stdout.txt -stderr stderr.txt -download"
+		version="${exoflight.version}"
+		icon="data/etc/Exoflight.icns"
+	    workingdirectory="$APP_PACKAGE/Contents/Resources"
+	    extraclasspath="$APP_PACKAGE/Contents/Resources"
+	    stubfile="scripts/JavaApplicationStub"
+		jvmversion="1.4+"
+	>
+		<jarfileset dir="dist/macosx-universal/lib" includes="**/**" />
+		<resourcefileset dir="dist/macosx-universal" excludes="lib/**" />
+	    <javaproperty name="java.library.path" value="$APP_PACKAGE/Contents/Resources/Java"/>
+		<javaproperty name="exo.fullscreen" value="true" />
+		<javaproperty name="apple.laf.useScreenMenuBar" value="true" />
+		<javaproperty name="com.apple.mrj.application.apple.menu.about.name" value="Exoflight" />
+	</jarbundler>
+
+	  <!-- Delete the JavaApplicationStub and replace it with a symbolic link -->
+	  <!--   which should work on older and future versions of OS X           -->
+	  <delete file="dist/Exoflight.app/Contents/MacOS/JavaApplicationStub"/>
+	  <exec executable="ln">
+	    <arg line="-s /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub"/>
+	    <arg value="dist/Exoflight.app/Contents/MacOS/JavaApplicationStub"/>
+	  </exec>
+	<!-- build final dist archives -->
+	<exec executable="tar" dir="dist">
+		<arg value="czf" />
+		<arg value="./Exoflight-${exoflight.version}-macosx-universal.tar.gz" />
+		<arg value="./Exoflight.app" />
+	</exec>
+</target>
+
+<target name="install-zipfiles">
+	<zip level="9"
+		includes="texs/*,uitexs/**,sounds/**,models/**"
+		excludes="texs/*/*.*,sounds/*.txt,texs/*/*.txt,models/*.lwo"
+		destfile="./dist/Exoflight-${exoflight.version}-media.zip"
+		basedir="./data" />
+	<zip level="9"
+		includes="eph/de405-19*,eph/de405-20*"
+		destfile="./dist/Exoflight-${exoflight.version}-ephemeris.zip"
+		basedir="./data" />
+</target>
+
+<target name="install-patch">
+	<zip level="9"
+		includes="texs/*,uitexs/**,sounds/**,models/**"
+		excludes="texs/*/*.*,sounds/*.txt,texs/*/*.txt,models/*.lwo"
+		destfile="./dist/Exoflight-${exoflight.version}-patch.zip"
+		basedir="./data">
+		<different targetdir="${lastversion.dir}" />
+	</zip>
+</target>
+
+<target name="install-all" depends="all,install-win32,install-macosx,install-zipfiles,install-patch"/>
+
+<!-- clover -->
+
+<target name="with.clover">
+	<ant antfile="${shared.dir}/build.xml" target="with.clover" />
+</target>
+
+<target name="clover.report">
+	<ant antfile="${shared.dir}/build.xml" target="clover.report" />
+</target>
+	
+</project>
+

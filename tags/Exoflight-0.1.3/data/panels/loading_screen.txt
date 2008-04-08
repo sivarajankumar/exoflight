@@ -1,0 +1,22 @@
+
+[Loading Screen]
+type=container
+x=0
+y=0
+width=1024
+height=768
+anchor=rb
+
+[loading_bkgnd]
+parent=Loading Screen
+type=bitmap
+texname=exotitle1.png
+x=0
+y=0
+width=1024
+height=768
+anchor=rb
+
+;[Console]
+;parent=Loading Screen
+;load=panels/dialogs/console.txt
