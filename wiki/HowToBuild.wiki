@@ -1,11 +1,9 @@
-First go to http://code.google.com/p/flcore/ and build the FLCore library. Be sure to look at the [http://code.google.com/p/flcore/wiki/HowToBuild HowToBuild] wiki page.
-
-While you're doing that, download the texture maps. You'll need the "basemaps-low.zip" from the [http://code.google.com/p/exoflight/downloads/list Downloads] section. You can also get high resolution elevation maps and surface maps if you wish. Put all these files in the `Exoflight/resource` directory.
-
-Then run the `unpack` and `jar` Ant tasks to unpack the .zip files and build the source code.
-
-When done run the `run` Ant task to start the sim.
-
 == Running from Eclipse ==
 
-You will have to add the string `-Djava.library.path=..\FLCore\lib\windows-i586` to the VM args section of the Run dialog. Also you will have to add the folder `.\data` to the Classpath tab under User Entries.
+You need to check out both the Exoflight project and the [http://code.google.com/p/flcore/ FLCore library]. Be sure to look at the [http://code.google.com/p/flcore/wiki/HowToBuild HowToBuild] wiki page.
+
+While you're doing that, download all the files in the "Featured" section of the [http://code.google.com/p/exoflight/downloads/list Downloads] tab and unzip them to the `Exoflight/data` directory. Some like the ephemeris files might be redundant.
+
+When done execute the `run` Ant task to start the sim.
+
+To execute it directly from Eclipse, the main class file is `com.fasterlight.exo.main.Exoflight`. You will have to add the string `-Djava.library.path=..\FLCore\lib\<platform>` to the VM args section of the Run dialog.
