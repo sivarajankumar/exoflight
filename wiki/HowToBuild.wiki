@@ -1,6 +1,6 @@
 == Running from Eclipse ==
 
-You need to check out both the Exoflight project and the [http://code.google.com/p/flcore/ FLCore library]. Be sure to look at the [http://code.google.com/p/flcore/wiki/HowToBuild HowToBuild] wiki page.
+You need to check out both the Exoflight project and the [http://code.google.com/p/flcore/ FLCore library]. Be sure to look at the [http://code.google.com/p/flcore/wiki/HowToBuild FLCore HowToBuild] wiki page.
 
 While you're doing that, download all the files in the "Featured" section of the [http://code.google.com/p/exoflight/downloads/list Downloads] tab and unzip them to the `Exoflight/data` directory. Some like the ephemeris files might be redundant.
 
