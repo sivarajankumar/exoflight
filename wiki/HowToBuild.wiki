@@ -4,6 +4,6 @@ You need to check out both the Exoflight project and the [http://code.google.com
 
 While you're doing that, download all the files in the "Featured" section of the [http://code.google.com/p/exoflight/downloads/list Downloads] tab and unzip them to the `Exoflight/data` directory. Some like the ephemeris files might be redundant.
 
-When done execute the `run` Ant task to start the sim.
+When done load `build.xml` and execute the `run` Ant task to start the sim.
 
 To execute it directly from Eclipse, the main class file is `com.fasterlight.exo.main.Exoflight`. You will have to add the string `-Djava.library.path=..\FLCore\lib\<platform>` to the VM args section of the Run dialog.
