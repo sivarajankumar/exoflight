@@ -22,5 +22,5 @@ Exoflight depends on certain native libraries that have not been tested with 64-
   # Download the app, unpack the .tgz
   # Click on Exoflight.app in Finder
   # Right-click and select Get Info (or hit Command-I)
-  # Expand the General group and click "Run in 32-bit Mode"
+  # Expand the General group and check "Run in 32-bit Mode"
   # Run the application
