@@ -17,7 +17,7 @@ If you create a file called `.X.tag` (where `X` is the name of the zip file) it 
 
 === Doesn't run on OS X 10.6 Snow Leopard, what gives? ===
 
-Exoflight depends on certain native libraries that have not been tested with 64-bit Java. The workaround is (thanks zolotkey):
+Exoflight depends on certain native libraries that have not been tested with 64-bit Java. The workaround is below (thanks zolotkey):
 
   # Download the app, unpack the .tgz
   # Click on Exoflight.app in Finder
