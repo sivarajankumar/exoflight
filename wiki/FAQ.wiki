@@ -15,7 +15,7 @@ If you are behind a proxy your best bet is to download them manually. Go to the 
 
 If you create a file called `.X.tag` (where `X` is the name of the zip file) it won't try to download them again.
 
-=== Running on OS X 10.6 Snow Leopard ===
+=== Doesn't run on OS X 10.6 Snow Leopard, what gives? ===
 
 Exoflight depends on certain native libraries that have not been tested with 64-bit Java. The workaround is (thanks zolotkey):
 
